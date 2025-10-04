@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 55% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 55% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 55% 8%;
+
+    /* FLIK Brand Colors */
+    --primary: 145 91% 54%; /* Verde limão #1DF55E */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 210 55% 8%; /* Azul escuro #0D1B2A */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 98%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 145 91% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 145 91% 54%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar personalizado */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 210 55% 8%;
+    --sidebar-primary: 145 91% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 210 55% 8%;
+    --sidebar-border: 210 15% 92%;
+    --sidebar-ring: 145 91% 54%;
+
+    /* Success & Warning */
+    --success: 145 91% 54%;
+    --success-foreground: 0 0% 100%;
+    --warning: 43 96% 56%;
+    --warning-foreground: 0 0% 0%;
+    --info: 210 100% 56%;
+    --info-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(145 91% 54%) 0%, hsl(175 70% 50%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(210 55% 8%) 0%, hsl(210 45% 15%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210 55% 8% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 55% 8% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(210 55% 8% / 0.1);
+    --shadow-brand: 0 8px 20px -4px hsl(145 91% 54% / 0.3);
+
+    /* Transitions */
+    --transition-base: all 0.2s ease;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 210 55% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 50% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 50% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 145 91% 54%;
+    --primary-foreground: 0 0% 0%;
+    
+    --secondary: 210 45% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 45% 15%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 210 45% 18%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 40% 18%;
+    --input: 210 40% 18%;
+    --ring: 145 91% 54%;
+
+    --sidebar-background: 210 55% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 145 91% 54%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 210 45% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 210 40% 18%;
+    --sidebar-ring: 145 91% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
